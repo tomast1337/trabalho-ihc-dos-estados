@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./index.js " defer></script>
+    <style>
+        .window {
+            border: 5px solid blue;
+            border-top:1 ;
+            border-radius: 10px;
+            width: 800px;
+            padding: 0;
+            margin: 10em auto;
+            outline: 1px solid linear-gradient(to bottom, #000000, #ffffff);
+        }
+        
+        .window_header {
+            background-image: linear-gradient(to bottom, #0000ff, #2a2abb);
+            color: white;
+            justify-content: center;
+            height: 30px;
+        }
+
+        .window_header h1 {
+            margin: 0;
+            font-size: 1em;
+            display: inline;
+            vertical-align: middle;
+        }
+
+        .window_header_icon {
+            height: 80%;
+            padding: auto ;
+            font-size: 90%;
+            aspect-ratio: 1/1;
+            font-weight: bold;
+            float: right;
+            cursor: pointer;
+            justify-content: center;
+            text-align: center;
+            border: #fafaff solid 1px;
+            border-radius: 15%;
+            margin-left: 0.2em;
+        }
+
+        .red{
+            background-image: linear-gradient(to bottom right, red, rgb(255, 163, 163));
+            color: white;
+        }
+
+        .blue{
+            background-image: linear-gradient(to bottom right, blue, #6c6cff );
+            color: white;
+        }
+
+
+        .container {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            border: 1px solid black;
+            background-color: #fafaff;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            width: 40%;
+            margin: auto 0;
+            font-size: 1em;
+        }
+
+        body {
+            background-image: url("https://pyxis.nymag.com/v1/imgs/a8f/847/fd0dbd5133682072919e9b938bb35d1ff9-11-windows-xp-bliss.jpg");
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <div class="window_header">
+            <h1>Quinto Exercício</h1>
+            <div class="window_header_icon red"> X </div>
+            <div class="window_header_icon blue"> ❏ </div>
+            <div class="window_header_icon blue"> _ </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <label for="combo_estado">Selecione o estado:</label>
+                <select id="estados" name="combo_estado">
+                </select>
+            </div>
+            <div class="box">
+                <label for="data">O nome do estado é:</label>
+                <input id="nome" name="data"></input>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
