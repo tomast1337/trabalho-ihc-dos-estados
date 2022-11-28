@@ -103,12 +103,16 @@ window_header_div.addEventListener('mousemove', function (event) {
             window_div.style.top = `${window.innerHeight - window_div.offsetHeight}px`;
         }
     }
-    console.log(mouse);
 });
+
+// centralize the window
+window_div.style.left = `${(window.innerWidth - window_div.offsetWidth) / 2}px`;
+window_div.style.top = `${(window.innerHeight - window_div.offsetHeight) / 2}px`;
+
 
 // Clock
 
-clock = document.getElementById('clock');
+const clock = document.getElementById('clock');
 
 function updateClock() {
     const date = new Date();
@@ -120,3 +124,23 @@ function updateClock() {
 }
 
 setInterval(updateClock, 1000);
+
+
+// Start button
+
+const start_button = document.getElementById('start_button');
+
+const start_menu = document.getElementById('start_menu');
+
+start_button.addEventListener('click', function () {
+    console.log('start button clicked');
+    // toggle display hidden or absolute
+    if (start_menu.style.display === 'none') {
+        start_menu.style.display = 'block';
+    }
+    else {
+        start_menu.style.display = 'none';
+    }
+});
+
+start_menu.style.display = 'none';
