@@ -3,139 +3,7 @@
 
 <head>
     <script src="./index.js " defer></script>
-    <style>
-        .window {
-            border: 5px solid blue;
-            border-top:1 ;
-            border-radius: 10px;
-            width: 800px;
-            padding: 0;
-            outline: 1px solid linear-gradient(to bottom, #000000, #ffffff);
-            position: absolute;
-        }
-        
-        .window_header {
-            background-image: linear-gradient(to bottom, #0000ff, #2a2abb);
-            color: white;
-            justify-content: center;
-            height: 30px;
-        }
-
-        .window_header h1 {
-            margin: 0;
-            font-size: 1em;
-            display: inline;
-            vertical-align: middle;
-        }
-
-        .window_header_icon {
-            height: 80%;
-            padding: auto ;
-            font-size: 90%;
-            aspect-ratio: 1/1;
-            font-weight: bold;
-            float: right;
-            cursor: pointer;
-            justify-content: center;
-            text-align: center;
-            border: #fafaff solid 1px;
-            border-radius: 15%;
-            margin-left: 0.2em;
-        }
-
-        .red{
-            background-image: linear-gradient(to bottom right, red, rgb(255, 163, 163));
-            color: white;
-        }
-
-        .blue{
-            background-image: linear-gradient(to bottom right, blue, #6c6cff );
-            color: white;
-        }
-
-
-        .container {
-            margin: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-            border: 1px solid black;
-            background-color: #fafaff;
-        }
-
-        .box {
-            display: flex;
-            flex-direction: column;
-            flex: 2;
-            width: 40%;
-            margin: auto 0;
-            font-size: 1em;
-        }
-
-        .taskbar {
-            background-image: linear-gradient(to bottom, blue, rgb(16, 16, 252) );
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 40px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-
-        .taskbar_start_button {
-            background-image: linear-gradient(to bottom, rgb(0, 59, 0), green );
-            height: 100%;
-            width: 120px;
-            border-bottom-right-radius: 10px;
-            border-top-right-radius: 10px;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .start_icon{
-            background-image: url("https://upload.wikimedia.org/wikipedia/ka/thumb/e/e4/Windows_logo_-_2002.svg/2316px-Windows_logo_-_2002.svg.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            height: 35px;
-            margin-right: 0.25em;
-            aspect-ratio: 1/1;
-        }
-
-        .taskbar_contex_menu {
-            background-image: linear-gradient(to bottom, rgb(61, 113, 255), rgb(61, 113, 255));
-            height: 100%;
-            width: 255px;
-            border: 1px solid rgb(92, 136, 255);
-            margin-right: 0;
-            margin-left: auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        #clock{
-            font-size: 1.5em;
-            font-weight: bold;
-            color: white;
-        }
-
-        body {
-            background-image: url("https://pyxis.nymag.com/v1/imgs/a8f/847/fd0dbd5133682072919e9b938bb35d1ff9-11-windows-xp-bliss.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -158,11 +26,58 @@
             </div>
         </div>
     </div>
+    <div class="start_menu" id="start_menu">
+        <div class="start_menu_header">
+            <span id="username">
+                <img src="./imgs/astronauta.jpg" />
+                <span id="user">Fábio</span>
+            </span>
+        </div>
+        <div class="start_menu_body">
+            <div class="start_menu_shortcuts start_menu_icons">
+                <ul>
+                </ul>
+            </div>
+            <div class="start_menu_shortcuts system_menu start_menu_system_icons">
+                <ul>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/mydocs.webp" />
+                            Meus Documentos
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/mymusic.webp" />
+                            Minhas Músicas
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/mycomputer.webp" />
+                            Meu Computador
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/controlpanel.webp" />
+                            Meu Painel de Controle
+                        </a>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+        <div class="start_menu_session_icons">
+
+        </div>
+    </div>
     <div class="taskbar">
-        <div class="taskbar_start_button">
+        <button class="taskbar_start_button" id="start_button">
             <div class="start_icon"></div>
             Start
-        </div>
+        </button>
         <div class="taskbar_contex_menu">
             <span id="clock"> 00:00</span>
         </div>
