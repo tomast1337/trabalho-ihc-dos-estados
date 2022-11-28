@@ -1,0 +1,259 @@
+.window {
+    border: 5px solid blue;
+    border-top: 1;
+    border-radius: 10px;
+    width: 800px;
+    padding: 0;
+    outline: 1px solid linear-gradient(to bottom, #000000, #ffffff);
+    position: absolute;
+}
+
+.window_header {
+    background-image: linear-gradient(to bottom, #0000ff, #2a2abb);
+    color: white;
+    justify-content: center;
+    height: 30px;
+}
+
+.window_header h1 {
+    margin: 0;
+    font-size: 1em;
+    display: inline;
+    vertical-align: middle;
+}
+
+.window_header_icon {
+    height: 80%;
+    padding: auto;
+    font-size: 90%;
+    aspect-ratio: 1/1;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border: #fafaff solid 1px;
+    border-radius: 15%;
+    margin-left: 0.2em;
+}
+
+.red {
+    background-image: linear-gradient(to bottom right, red, rgb(255, 163, 163));
+    color: white;
+}
+
+.blue {
+    background-image: linear-gradient(to bottom right, blue, #6c6cff);
+    color: white;
+}
+
+
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid black;
+    background-color: #fafaff;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    width: 40%;
+    margin: auto 0;
+    font-size: 1em;
+}
+
+.taskbar {
+    background-image: linear-gradient(to bottom, blue, rgb(16, 16, 252));
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.taskbar_start_button {
+    background-image: linear-gradient(to bottom, rgb(0, 59, 0), green);
+    height: 100%;
+    width: 120px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.taskbar_start_button:hover {
+    background-image: linear-gradient(to bottom, rgb(0, 117, 0), rgb(2, 176, 2));
+}
+
+.start_icon {
+    background-image: url("./imgs/win-logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 35px;
+    margin-right: 0.25em;
+    aspect-ratio: 1/1;
+}
+
+.taskbar_contex_menu {
+    background-image: linear-gradient(to bottom, rgb(61, 113, 255), rgb(61, 113, 255));
+    height: 100%;
+    width: 255px;
+    border: 1px solid rgb(92, 136, 255);
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#clock {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+body {
+    background-image: url("./imgs/bliss.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.start_menu {
+    position: absolute;
+    background-color: white;
+    z-index: 3;
+    width: 460px;
+    height: 600px;
+    top: auto;
+    bottom: 40px;
+    left: 0;
+    border: #0000ff solid 1px;
+}
+
+.start_menu_header {
+    width: 100%;
+    height: 72px;
+    background-image: radial-gradient(rgb(0, 50, 186), rgb(61, 113, 255));
+    background-position: top;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    align-items: center;
+}
+
+.start_menu_header span {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    margin-left: 2px;
+    margin-right: auto;
+}
+
+.start_menu_header img {
+    height: 50px;
+    aspect-ratio: 1/1;
+    image-rendering: pixelated;
+    margin: auto 0;
+    border-radius: 2px;
+    border: 1px solid white;
+    margin: auto 0.5em;
+}
+
+.start_menu_session_icons {
+    width: 100%;
+    height: 64px;
+    background-image: radial-gradient(rgb(0, 50, 186), rgb(61, 113, 255));
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    position: absolute;
+}
+
+.start_menu_body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 464px;
+    margin-top: 72px;
+}
+
+.start_menu_body ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 1px;
+    width: 100%;
+
+}
+
+.start_menu_body hr {
+    width: 98%;
+    border: .5px solid #676767;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.start_menu_icons li {
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    color: #1b1b23;
+    cursor: pointer;
+    margin: .5em 0;
+}
+
+.start_menu_icons a{
+    text-decoration: none;
+}
+
+.start_menu_system_icons li {
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: .5em 0;
+}
+
+.start_menu_icon {
+    width: 32px;
+    aspect-ratio: 1/1;
+}
+
+.start_menu_icons li:hover {
+    background-color: #e6e6e6;
+}
+
+.start_menu_system_icons li:hover {
+    background-color: #e6e6e6;
+}
+
+.system_menu {
+    color: #080837;
+    background-color: #52a7e8;
+}
+
+.start_menu_shortcuts {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
