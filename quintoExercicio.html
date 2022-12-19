@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./index.js " defer></script>
+    <script src="./windows.js " defer></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="window" id="window">
+        <div class="window_header" id="window_header">
+            <h1>Quinto Exercício</h1>
+            <div class="window_header_icon red"> X </div>
+            <div class="window_header_icon blue"> ❏ </div>
+            <div class="window_header_icon blue"> _ </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <label for="combo_estado">Selecione o estado:</label>
+                <select id="estados" name="combo_estado">
+                </select>
+            </div>
+            <div class="box">
+                <label for="data">O nome do estado é:</label>
+                <input id="nome" name="data"></input>
+            </div>
+        </div>
+    </div>
+    <div class="start_menu" id="start_menu">
+        <div class="start_menu_header">
+            <span id="username">
+                <img src="./imgs/astronauta.jpg" />
+                <span id="user">Fábio</span>
+            </span>
+        </div>
+        <div class="start_menu_body">
+            <div class="start_menu_shortcuts start_menu_icons">
+                <ul>
+                </ul>
+            </div>
+            <div class="start_menu_shortcuts system_menu start_menu_system_icons">
+                <ul>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/mydocs.webp" />
+                            Meus Documentos
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/mymusic.webp" />
+                            Minhas Músicas
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/mycomputer.webp" />
+                            Meu Computador
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a>
+                            <img class="start_menu_icon" src="./imgs/controlpanel.webp" />
+                            Meu Painel de Controle
+                        </a>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+        <div class="start_menu_session_icons">
+
+        </div>
+    </div>
+    <div class="taskbar">
+        <button class="taskbar_start_button" id="start_button">
+            <div class="start_icon"></div>
+            Start
+        </button>
+        <div class="taskbar_contex_menu">
+            <span id="clock"> 00:00</span>
+        </div>
+    </div>
+</body>
+
+</html>

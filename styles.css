@@ -58,6 +58,23 @@
     background-color: #fafaff;
 }
 
+.container_free {
+    margin: 0;
+    width: 100%;
+    border: 1px solid black;
+    background-color: #fafaff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:   center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    height: fit-content;
+}
+
 .box {
     display: flex;
     flex-direction: column;

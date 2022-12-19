@@ -2,28 +2,96 @@
 <html>
 
 <head>
-    <script src="./index.js " defer></script>
+    <script src="./windows.js " defer></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
     <div class="window" id="window">
         <div class="window_header" id="window_header">
-            <h1>Quinto Exercício</h1>
+            <h1>Sexto Exercício</h1>
             <div class="window_header_icon red"> X </div>
             <div class="window_header_icon blue"> ❏ </div>
             <div class="window_header_icon blue"> _ </div>
         </div>
-        <div class="container">
-            <div class="box">
-                <label for="combo_estado">Selecione o estado:</label>
-                <select id="estados" name="combo_estado">
-                </select>
-            </div>
-            <div class="box">
-                <label for="data">O nome do estado é:</label>
-                <input id="nome" name="data"></input>
-            </div>
+        <div class="container_free">
+            <p>
+                "Sexto Programa de GUI"
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        Valor Inicial
+                    </td>
+                    <td>
+                        Juros ao ano:
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="valor_inicial" max="1000000" min="1" step="1" value="1000" />
+                    </td>
+                    <td>
+                        <input type="number" id="juros_ao_ano" max="100" min="0" step="1" value="12" /> %
+                    </td>
+            </table>
+            <p>
+                A rentabilidade de sua aplicação a cada ano sera:
+            </p>
+            <table id="output">
+                <tr>
+                    <td>
+                        Ano
+                    </td>
+                    <td>
+                        Valor
+                    </td>
+                    <td>
+                        Juros
+                    </td>
+                </tr>
+            </table>
+            <p>
+                "Muito obrigado por utilizar nosso serviço!"
+            </p>
+            <script defer>
+                window.onload = () => {
+                    const outputTableElem = document.getElementById("output");
+                    const valorInicialElem = document.getElementById("valor_inicial");
+                    const jurosAoAnoElem = document.getElementById("juros_ao_ano");
+
+                    const currentYear = new Date().getFullYear();
+
+                    const data = []
+                    let juros = (jurosAoAnoElem.value / 100);;
+                    let valor = valorInicialElem.value;
+                    let year = currentYear;
+
+                    for (let yearOffset = 0; yearOffset < 5; yearOffset++) {
+                        valor = valor * (1 + juros);
+                        year++;
+
+                        const row = document.createElement("tr");
+                        const yearCell = document.createElement("td");
+                        const valorCell = document.createElement("td");
+                        const jurosCell = document.createElement("td");
+
+                        yearCell.innerText = year;
+                        valorCell.innerText = valor.toFixed(2);
+                        // percent diference between the first year and the current year
+                        jurosCell.innerText = `${
+                            ((valor - valorInicialElem.value) / valorInicialElem.value * 100).toFixed(2)
+                        }%`;
+
+                        row.appendChild(yearCell);
+                        row.appendChild(valorCell);
+                        row.appendChild(jurosCell);
+
+                        outputTableElem.appendChild(row);
+                    }
+                }
+
+            </script>
         </div>
     </div>
     <div class="start_menu" id="start_menu">
