@@ -59,9 +59,14 @@
                 const valorInicialElem = document.getElementById("valor_inicial");
                 const jurosAoAnoElem = document.getElementById("juros_ao_ano");
 
-                valorInicialElem.addEventListener("change", update);
-                jurosAoAnoElem.addEventListener("change", update);
+
+
                 const update = () => {
+
+                    // clear the table
+                    while (outputTableElem.firstChild) {
+                        outputTableElem.removeChild(outputTableElem.firstChild);
+                    }
 
                     const currentYear = new Date().getFullYear();
 
@@ -92,6 +97,9 @@
                         outputTableElem.appendChild(row);
                     }
                 }
+
+                valorInicialElem.addEventListener("change", update);
+                jurosAoAnoElem.addEventListener("change", update);
 
                 update();
             </script>
